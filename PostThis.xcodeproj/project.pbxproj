@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		616D1BC9FAE9A63CE893EEAC /* Pods_PostThis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 352DA552D4FB4F38CAA4F79F /* Pods_PostThis.framework */; };
+		C94439951D94764300FB51C4 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94439941D94764300FB51C4 /* LoginView.swift */; };
+		C94439981D94769700FB51C4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94439971D94769700FB51C4 /* Constants.swift */; };
+		C944399A1D94785100FB51C4 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94439991D94785100FB51C4 /* RoundButton.swift */; };
 		C968E47B1D93560300F7FE7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C968E47A1D93560300F7FE7D /* AppDelegate.swift */; };
 		C968E47D1D93560300F7FE7D /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C968E47C1D93560300F7FE7D /* SignInVC.swift */; };
 		C968E4801D93560300F7FE7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C968E47E1D93560300F7FE7D /* Main.storyboard */; };
@@ -20,6 +23,9 @@
 		197268458F4F21562A3402C9 /* Pods-PostThis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostThis.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PostThis/Pods-PostThis.debug.xcconfig"; sourceTree = "<group>"; };
 		352DA552D4FB4F38CAA4F79F /* Pods_PostThis.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PostThis.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BED9E756D7E2B7430D49A6A8 /* Pods-PostThis.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostThis.release.xcconfig"; path = "Pods/Target Support Files/Pods-PostThis/Pods-PostThis.release.xcconfig"; sourceTree = "<group>"; };
+		C94439941D94764300FB51C4 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		C94439971D94769700FB51C4 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C94439991D94785100FB51C4 /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		C968E4771D93560300F7FE7D /* PostThis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PostThis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C968E47A1D93560300F7FE7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C968E47C1D93560300F7FE7D /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -69,8 +75,18 @@
 			isa = PBXGroup;
 			children = (
 				C968E47C1D93560300F7FE7D /* SignInVC.swift */,
+				C94439941D94764300FB51C4 /* LoginView.swift */,
+				C94439991D94785100FB51C4 /* RoundButton.swift */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		C94439961D94768500FB51C4 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				C94439971D94769700FB51C4 /* Constants.swift */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 		C968E46E1D93560300F7FE7D = {
@@ -94,6 +110,7 @@
 		C968E4791D93560300F7FE7D /* PostThis */ = {
 			isa = PBXGroup;
 			children = (
+				C94439961D94768500FB51C4 /* Utilities */,
 				C94439931D93582200FB51C4 /* View */,
 				C94439921D93581B00FB51C4 /* Controller */,
 				C94439911D93581400FB51C4 /* Model */,
@@ -240,8 +257,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C94439951D94764300FB51C4 /* LoginView.swift in Sources */,
+				C944399A1D94785100FB51C4 /* RoundButton.swift in Sources */,
 				C968E47D1D93560300F7FE7D /* SignInVC.swift in Sources */,
 				C968E47B1D93560300F7FE7D /* AppDelegate.swift in Sources */,
+				C94439981D94769700FB51C4 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
