@@ -11,5 +11,5 @@ target 'PostThis' do
   pod ‘Firebase/Auth’
   pod ‘Firebase/Storage’
   pod 'FBSDKLoginKit'
-
+  pod 'SwiftKeychainWrapper', '~> 2.0'
 end
