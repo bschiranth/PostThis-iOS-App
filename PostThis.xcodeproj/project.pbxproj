@@ -17,11 +17,13 @@
 		C968E4821D93560300F7FE7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C968E4811D93560300F7FE7D /* Assets.xcassets */; };
 		C968E4851D93560300F7FE7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C968E4831D93560300F7FE7D /* LaunchScreen.storyboard */; };
 		C968E48D1D93568700F7FE7D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C968E48C1D93568700F7FE7D /* GoogleService-Info.plist */; };
+		C99B2B9E1D972BE900C6C7CE /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99B2B9D1D972BE900C6C7CE /* Post.swift */; };
 		C9AFC19B1D94B50300770945 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9AFC19A1D94B50300770945 /* FBSDKCoreKit.framework */; };
 		C9AFC19D1D94B51900770945 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9AFC19C1D94B51900770945 /* FBSDKLoginKit.framework */; };
 		C9AFC19F1D94B52500770945 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9AFC19E1D94B52500770945 /* FBSDKShareKit.framework */; };
 		C9AFC1A21D94DD8C00770945 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AFC1A11D94DD8C00770945 /* FeedVC.swift */; };
 		C9AFC1A41D9520FA00770945 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AFC1A31D9520FA00770945 /* PostCell.swift */; };
+		C9AFC1A71D952CA500770945 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AFC1A61D952CA500770945 /* DataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,12 +41,14 @@
 		C968E4841D93560300F7FE7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C968E4861D93560300F7FE7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C968E48C1D93568700F7FE7D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C99B2B9D1D972BE900C6C7CE /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		C9AFC19A1D94B50300770945 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		C9AFC19C1D94B51900770945 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		C9AFC19E1D94B52500770945 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		C9AFC1A01D94B5EA00770945 /* PostThis.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PostThis.entitlements; sourceTree = "<group>"; };
 		C9AFC1A11D94DD8C00770945 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		C9AFC1A31D9520FA00770945 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		C9AFC1A61D952CA500770945 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,7 @@
 		C94439911D93581400FB51C4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C99B2B9D1D972BE900C6C7CE /* Post.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -127,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				C9AFC1A01D94B5EA00770945 /* PostThis.entitlements */,
+				C9AFC1A51D952C8C00770945 /* Services */,
 				C94439961D94768500FB51C4 /* Utilities */,
 				C94439931D93582200FB51C4 /* View */,
 				C94439921D93581B00FB51C4 /* Controller */,
@@ -139,6 +145,14 @@
 				C968E48C1D93568700F7FE7D /* GoogleService-Info.plist */,
 			);
 			path = PostThis;
+			sourceTree = "<group>";
+		};
+		C9AFC1A51D952C8C00770945 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C9AFC1A61D952CA500770945 /* DataService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 		D845502385910BA5F3845C90 /* Frameworks */ = {
@@ -288,7 +302,9 @@
 				C944399A1D94785100FB51C4 /* RoundButton.swift in Sources */,
 				C968E47D1D93560300F7FE7D /* SignInVC.swift in Sources */,
 				C968E47B1D93560300F7FE7D /* AppDelegate.swift in Sources */,
+				C99B2B9E1D972BE900C6C7CE /* Post.swift in Sources */,
 				C94439981D94769700FB51C4 /* Constants.swift in Sources */,
+				C9AFC1A71D952CA500770945 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
