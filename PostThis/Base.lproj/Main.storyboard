@@ -147,36 +147,44 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tkG-4a-Id7">
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sign-out" translatesAutoresizingMaskIntoConstraints="NO" id="Rba-Xn-WUw">
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="44" id="Y3X-zU-1Ek"/>
-                                            <constraint firstAttribute="height" constant="33" id="eAB-Ua-S6P"/>
-                                        </constraints>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6D-DA-yRA">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Feed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6D-DA-yRA">
+                                        <frame key="frameInset" minX="158" minY="19" width="60" height="36"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="26"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lZw-7m-cv4" userLabel="Signout">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="38" id="Gyx-Se-MzZ"/>
+                                            <constraint firstAttribute="height" constant="31" id="noO-CK-kmG"/>
+                                        </constraints>
+                                        <state key="normal" image="sign-out"/>
+                                        <connections>
+                                            <action selector="signOutPressed:" destination="3Wa-Fo-Z9e" eventType="touchUpInside" id="pjq-6S-6uV"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.73725490199999999" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="a6D-DA-yRA" firstAttribute="centerY" secondItem="Rba-Xn-WUw" secondAttribute="centerY" id="3ab-u6-lE6"/>
                                     <constraint firstItem="a6D-DA-yRA" firstAttribute="centerX" secondItem="tkG-4a-Id7" secondAttribute="centerX" id="HQf-SL-CEG"/>
-                                    <constraint firstItem="Rba-Xn-WUw" firstAttribute="top" secondItem="tkG-4a-Id7" secondAttribute="top" constant="20" id="VwH-zc-Cre"/>
+                                    <constraint firstItem="lZw-7m-cv4" firstAttribute="centerY" secondItem="tkG-4a-Id7" secondAttribute="centerY" id="Tap-qF-Gae"/>
                                     <constraint firstAttribute="height" constant="60" id="Wvm-9a-kPK"/>
-                                    <constraint firstItem="Rba-Xn-WUw" firstAttribute="leading" secondItem="tkG-4a-Id7" secondAttribute="leading" constant="8" id="wbF-kH-v2V"/>
+                                    <constraint firstItem="lZw-7m-cv4" firstAttribute="leading" secondItem="tkG-4a-Id7" secondAttribute="leading" constant="15" id="sOB-Aq-t8c"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GyK-Ed-BVw">
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JrB-bh-ad4">
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="LFK-yE-XXo">
+                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="LFK-yE-XXo">
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="UzN-Mc-CRa"/>
                                                     <constraint firstAttribute="width" constant="45" id="gPn-5f-bNa"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="Jwa-oa-xhD" appends="YES" id="wIn-GO-x2p"/>
+                                                </connections>
                                             </imageView>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add a Caption" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TvP-sh-yzW">
                                                 <constraints>
@@ -193,6 +201,9 @@
                                                     <constraint firstAttribute="height" constant="45" id="Wne-yN-Fki"/>
                                                 </constraints>
                                                 <state key="normal" image="add-post"/>
+                                                <connections>
+                                                    <action selector="postImagedPressed:" destination="3Wa-Fo-Z9e" eventType="touchUpInside" id="ov3-Fc-I0u"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -321,10 +332,16 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addImageOutlet" destination="LFK-yE-XXo" id="IFA-C6-zNu"/>
                         <outlet property="tableView" destination="jeG-dG-imY" id="HDR-j2-Z7j"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Nj-zC-6Z7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Jwa-oa-xhD">
+                    <connections>
+                        <action selector="imgPickerPresssed:" destination="3Wa-Fo-Z9e" id="JSg-GJ-JQN"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="781.60000000000002" y="44.527736131934034"/>
         </scene>
