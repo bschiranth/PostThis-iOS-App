@@ -15,12 +15,15 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource , UII
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addImageOutlet: UIImageView!
 
+    @IBOutlet weak var captionField: UITextField!
     //cache needs to be accessible throughout all classes
     static var imageCache: NSCache<NSString,UIImage> =  NSCache()
     
     var posts = [Post]() // array of user posts data
     
     var imagePicker:UIImagePickerController! // to pick the image from mobile
+    
+    var imageSelected:Bool = false // post image check
     
     
     override func viewDidLoad() {
@@ -34,6 +37,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource , UII
         imagePicker.delegate = self
         
         //.value can be .added,.removed,.changed, etc
+        
         Dataservice.ds.REF_POSTS.observe(.value, with: { (snapshot) in
             self.posts = [] // clear the posts array
             //print("FIRTAG: \(snapshot.value)")
@@ -93,6 +97,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource , UII
         
         if let image = info[UIImagePickerControllerEditedImage] as? UIImage{
             addImageOutlet.image = image //set the chosen image to image button
+            imageSelected = true
         }else{
             print("IMG: Error while picking the image")
         }
@@ -108,6 +113,33 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource , UII
     
     //post image
     @IBAction func postImagedPressed(_ sender: AnyObject) {
+        
+        guard let caption = captionField.text,caption != "" else {
+            print("Err: Caption must not be empty")
+            return
+        }
+        guard let img = addImageOutlet.image,  imageSelected == true else {
+            print("Err: An image must be added")
+            return
+        }
+        
+        if let imageData = UIImageJPEGRepresentation(img, 0.2){
+            let imageUid = NSUUID().uuidString
+            let metadata = FIRStorageMetadata()
+            metadata.contentType = "image/jpeg"
+            
+            Dataservice.ds.REF_POST_IMAGES.child(imageUid).put(imageData,metadata: metadata){(metadata,error)in
+            
+                if error != nil{
+                    print("ImageErr: Unable to upload image - \(error.debugDescription)")
+                }else{
+                    print("ImageSuccess: Successfully uploaded to firbase")
+                    let downloadUrl = metadata?.downloadURL()?.absoluteString
+                    
+                    
+                }
+            }
+        }
     }
     
     //sign out

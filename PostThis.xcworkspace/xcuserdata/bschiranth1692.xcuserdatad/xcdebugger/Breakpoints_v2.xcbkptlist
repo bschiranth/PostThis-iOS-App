@@ -216,12 +216,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PostThis/FeedVC.swift"
-            timestampString = "496631042.585137"
+            timestampString = "497245591.361936"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
-            landmarkName = "signOutPressed(_:)"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
+            landmarkName = "FeedVC"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PostThis/FeedVC.swift"
+            timestampString = "497246176.629153"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
+            landmarkName = "postImagedPressed(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

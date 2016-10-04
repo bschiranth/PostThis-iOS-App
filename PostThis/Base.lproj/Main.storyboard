@@ -333,6 +333,7 @@
                     </view>
                     <connections>
                         <outlet property="addImageOutlet" destination="LFK-yE-XXo" id="IFA-C6-zNu"/>
+                        <outlet property="captionField" destination="TvP-sh-yzW" id="N5f-52-hWo"/>
                         <outlet property="tableView" destination="jeG-dG-imY" id="HDR-j2-Z7j"/>
                     </connections>
                 </viewController>
