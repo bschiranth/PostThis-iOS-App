@@ -216,13 +216,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PostThis/FeedVC.swift"
-            timestampString = "497245591.361936"
+            timestampString = "497340337.886405"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "140"
-            endingLineNumber = "140"
-            landmarkName = "FeedVC"
-            landmarkType = "3">
+            startingLineNumber = "144"
+            endingLineNumber = "144"
+            landmarkName = "postImagedPressed(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -232,11 +232,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PostThis/FeedVC.swift"
-            timestampString = "497246176.629153"
+            timestampString = "497340337.886405"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "119"
-            endingLineNumber = "119"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
             landmarkName = "postImagedPressed(_:)"
             landmarkType = "7">
          </BreakpointContent>

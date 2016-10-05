@@ -224,7 +224,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="403"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2yW-tQ-idH" id="7nB-WU-2OF">
-                                            <frame key="frameInset" width="375" height="402"/>
+                                            <frame key="frameInset" width="375" height="402.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="itN-FB-5Oo">
@@ -238,7 +238,7 @@
                                                                                 <constraint firstAttribute="width" constant="70" id="Ffl-UA-YbJ"/>
                                                                             </constraints>
                                                                         </imageView>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgl-hY-sjk">
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="chiranth" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgl-hY-sjk">
                                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                             <color key="textColor" red="0.93909090760000002" green="0.28788527850000001" blue="0.44050812719999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             <nil key="highlightedColor"/>
@@ -308,6 +308,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="caption" destination="asA-OI-2zV" id="wVV-gM-qnr"/>
+                                            <outlet property="likeImg" destination="5ez-dU-Ork" id="n1j-Hy-4Np"/>
                                             <outlet property="likeLabel" destination="OBt-AM-uOZ" id="MeD-Kx-dzH"/>
                                             <outlet property="postImg" destination="Cot-pD-XFu" id="vwE-P8-UC2"/>
                                             <outlet property="profileImg" destination="u8u-f6-o77" id="wqF-iV-8sN"/>

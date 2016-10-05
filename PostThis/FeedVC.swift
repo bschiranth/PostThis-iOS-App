@@ -16,6 +16,10 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource , UII
     @IBOutlet weak var addImageOutlet: UIImageView!
 
     @IBOutlet weak var captionField: UITextField!
+    
+
+    
+    
     //cache needs to be accessible throughout all classes
     static var imageCache: NSCache<NSString,UIImage> =  NSCache()
     
@@ -58,7 +62,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource , UII
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        //self.navigationController?.popViewController(animated: true)
+       
     }
     
     /// table view
@@ -136,12 +140,39 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource , UII
                     print("ImageSuccess: Successfully uploaded to firbase")
                     let downloadUrl = metadata?.downloadURL()?.absoluteString
                     
+                    if let url = downloadUrl{
+                        self.postToFirebase(imgUrl: url)
+                    }
                     
                 }
             }
         }
     }
     
+    // posting to firebase
+    func postToFirebase(imgUrl:String)  {
+        //dictionary keys need to match the firebase keys
+        //let post = ["caption":captionField.text!,"imageUrl":imgUrl,"likes":0]
+        let post = [
+            
+            "caption": captionField.text! as String,
+            
+            "imageUrl": imgUrl as String,
+            
+            "likes": 0 as Int
+            
+            ] as [String : Any]
+        let firebasePost = Dataservice.ds.REF_POSTS.childByAutoId()
+        firebasePost.setValue(post)
+        
+        captionField.text = ""
+        imageSelected = false
+        addImageOutlet.image = UIImage(named: "add-image")
+        
+        tableView.reloadData() //reload table view after realoding
+        
+    }
+
     //sign out
     @IBAction func signOutPressed(_ sender:AnyObject){
         let keychainResult = KeychainWrapper.removeObjectForKey(KEY_UID)

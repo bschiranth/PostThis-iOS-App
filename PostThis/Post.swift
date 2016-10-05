@@ -14,6 +14,7 @@ class Post {
     private var _imageUrl: String!
     private var _likes: Int!
     private var _postId: String! //key of the post in firebase
+    private var _postRef: FIRDatabaseReference!
     
     var caption: String {
         return _caption
@@ -52,5 +53,17 @@ class Post {
         if let imageUrl = postData["imageUrl"] as? String{
             self._imageUrl = imageUrl
         }
+        
+        _postRef = Dataservice.ds.REF_POSTS.child(_postId)
+    }
+    
+    func adjustLikes(addLike:Bool)  {
+        if addLike{
+            _likes = _likes + 1
+        }else{
+            _likes = _likes - 1
+        }
+        _postRef.child("likes").setValue(_likes)
+        
     }
 }
