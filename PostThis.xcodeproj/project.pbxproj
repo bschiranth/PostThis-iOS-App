@@ -8,18 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		616D1BC9FAE9A63CE893EEAC /* Pods_PostThis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 352DA552D4FB4F38CAA4F79F /* Pods_PostThis.framework */; };
+		C94439951D94764300FB51C4 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94439941D94764300FB51C4 /* LoginView.swift */; };
+		C94439981D94769700FB51C4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94439971D94769700FB51C4 /* Constants.swift */; };
+		C944399A1D94785100FB51C4 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94439991D94785100FB51C4 /* RoundButton.swift */; };
 		C968E47B1D93560300F7FE7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C968E47A1D93560300F7FE7D /* AppDelegate.swift */; };
 		C968E47D1D93560300F7FE7D /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C968E47C1D93560300F7FE7D /* SignInVC.swift */; };
 		C968E4801D93560300F7FE7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C968E47E1D93560300F7FE7D /* Main.storyboard */; };
 		C968E4821D93560300F7FE7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C968E4811D93560300F7FE7D /* Assets.xcassets */; };
 		C968E4851D93560300F7FE7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C968E4831D93560300F7FE7D /* LaunchScreen.storyboard */; };
 		C968E48D1D93568700F7FE7D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C968E48C1D93568700F7FE7D /* GoogleService-Info.plist */; };
+		C99B2B9E1D972BE900C6C7CE /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99B2B9D1D972BE900C6C7CE /* Post.swift */; };
+		C9AFC19B1D94B50300770945 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9AFC19A1D94B50300770945 /* FBSDKCoreKit.framework */; };
+		C9AFC19D1D94B51900770945 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9AFC19C1D94B51900770945 /* FBSDKLoginKit.framework */; };
+		C9AFC19F1D94B52500770945 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9AFC19E1D94B52500770945 /* FBSDKShareKit.framework */; };
+		C9AFC1A21D94DD8C00770945 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AFC1A11D94DD8C00770945 /* FeedVC.swift */; };
+		C9AFC1A41D9520FA00770945 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AFC1A31D9520FA00770945 /* PostCell.swift */; };
+		C9AFC1A71D952CA500770945 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AFC1A61D952CA500770945 /* DataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		197268458F4F21562A3402C9 /* Pods-PostThis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostThis.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PostThis/Pods-PostThis.debug.xcconfig"; sourceTree = "<group>"; };
 		352DA552D4FB4F38CAA4F79F /* Pods_PostThis.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PostThis.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BED9E756D7E2B7430D49A6A8 /* Pods-PostThis.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostThis.release.xcconfig"; path = "Pods/Target Support Files/Pods-PostThis/Pods-PostThis.release.xcconfig"; sourceTree = "<group>"; };
+		C94439941D94764300FB51C4 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		C94439971D94769700FB51C4 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C94439991D94785100FB51C4 /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		C968E4771D93560300F7FE7D /* PostThis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PostThis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C968E47A1D93560300F7FE7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C968E47C1D93560300F7FE7D /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -28,6 +41,14 @@
 		C968E4841D93560300F7FE7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C968E4861D93560300F7FE7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C968E48C1D93568700F7FE7D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C99B2B9D1D972BE900C6C7CE /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		C9AFC19A1D94B50300770945 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		C9AFC19C1D94B51900770945 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		C9AFC19E1D94B52500770945 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		C9AFC1A01D94B5EA00770945 /* PostThis.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PostThis.entitlements; sourceTree = "<group>"; };
+		C9AFC1A11D94DD8C00770945 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		C9AFC1A31D9520FA00770945 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		C9AFC1A61D952CA500770945 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,7 +56,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9AFC19F1D94B52500770945 /* FBSDKShareKit.framework in Frameworks */,
 				616D1BC9FAE9A63CE893EEAC /* Pods_PostThis.framework in Frameworks */,
+				C9AFC19B1D94B50300770945 /* FBSDKCoreKit.framework in Frameworks */,
+				C9AFC19D1D94B51900770945 /* FBSDKLoginKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +78,7 @@
 		C94439911D93581400FB51C4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C99B2B9D1D972BE900C6C7CE /* Post.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -61,6 +86,8 @@
 		C94439921D93581B00FB51C4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C968E47C1D93560300F7FE7D /* SignInVC.swift */,
+				C9AFC1A11D94DD8C00770945 /* FeedVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -68,9 +95,19 @@
 		C94439931D93582200FB51C4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C968E47C1D93560300F7FE7D /* SignInVC.swift */,
+				C94439941D94764300FB51C4 /* LoginView.swift */,
+				C94439991D94785100FB51C4 /* RoundButton.swift */,
+				C9AFC1A31D9520FA00770945 /* PostCell.swift */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		C94439961D94768500FB51C4 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				C94439971D94769700FB51C4 /* Constants.swift */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 		C968E46E1D93560300F7FE7D = {
@@ -94,6 +131,9 @@
 		C968E4791D93560300F7FE7D /* PostThis */ = {
 			isa = PBXGroup;
 			children = (
+				C9AFC1A01D94B5EA00770945 /* PostThis.entitlements */,
+				C9AFC1A51D952C8C00770945 /* Services */,
+				C94439961D94768500FB51C4 /* Utilities */,
 				C94439931D93582200FB51C4 /* View */,
 				C94439921D93581B00FB51C4 /* Controller */,
 				C94439911D93581400FB51C4 /* Model */,
@@ -107,9 +147,20 @@
 			path = PostThis;
 			sourceTree = "<group>";
 		};
+		C9AFC1A51D952C8C00770945 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C9AFC1A61D952CA500770945 /* DataService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		D845502385910BA5F3845C90 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C9AFC19E1D94B52500770945 /* FBSDKShareKit.framework */,
+				C9AFC19C1D94B51900770945 /* FBSDKLoginKit.framework */,
+				C9AFC19A1D94B50300770945 /* FBSDKCoreKit.framework */,
 				352DA552D4FB4F38CAA4F79F /* Pods_PostThis.framework */,
 			);
 			name = Frameworks;
@@ -152,6 +203,11 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 9LGU8TYSZ7;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -240,8 +296,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9AFC1A41D9520FA00770945 /* PostCell.swift in Sources */,
+				C9AFC1A21D94DD8C00770945 /* FeedVC.swift in Sources */,
+				C94439951D94764300FB51C4 /* LoginView.swift in Sources */,
+				C944399A1D94785100FB51C4 /* RoundButton.swift in Sources */,
 				C968E47D1D93560300F7FE7D /* SignInVC.swift in Sources */,
 				C968E47B1D93560300F7FE7D /* AppDelegate.swift in Sources */,
+				C99B2B9E1D972BE900C6C7CE /* Post.swift in Sources */,
+				C94439981D94769700FB51C4 /* Constants.swift in Sources */,
+				C9AFC1A71D952CA500770945 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,7 +428,12 @@
 			baseConfigurationReference = 197268458F4F21562A3402C9 /* Pods-PostThis.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PostThis/PostThis.entitlements;
 				DEVELOPMENT_TEAM = 9LGU8TYSZ7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = PostThis/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = chiranth.PostThis;
@@ -379,7 +447,12 @@
 			baseConfigurationReference = BED9E756D7E2B7430D49A6A8 /* Pods-PostThis.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PostThis/PostThis.entitlements;
 				DEVELOPMENT_TEAM = 9LGU8TYSZ7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = PostThis/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = chiranth.PostThis;

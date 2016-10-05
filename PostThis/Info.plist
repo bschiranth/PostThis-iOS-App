@@ -41,5 +41,20 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb255452018183732</string>
+			</array>
+		</dict>
+	</array>
+	<key>FacebookAppID</key>
+	<string>255452018183732</string>
+	<key>FacebookDisplayName</key>
+	<string>PostThis</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Plese allow permission to access photo library to post the pictures</string>
 </dict>
 </plist>
